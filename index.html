@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제이맘 - 온 가족이 함께 아이를 돌보는 육아 비서</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #F7F9FC;
+    color: #111827;
+  }
+
+  header {
+    background: #fff;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5EAF2;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2F6BFF;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: #EAF2FF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .download-btn {
+    background: #2F6BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: linear-gradient(180deg, #fff 0%, #F7F9FC 100%);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: #EAF2FF;
+    color: #2F6BFF;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111827;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 span {
+    color: #2F6BFF;
+  }
+
+  .hero p {
+    font-size: 17px;
+    color: #6B7280;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 36px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: #2F6BFF;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary {
+    background: #fff;
+    color: #2F6BFF;
+    padding: 14px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1.5px solid #2F6BFF;
+  }
+
+  .features {
+    padding: 60px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #111827;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #E5EAF2;
+  }
+
+  .feature-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.6;
+  }
+
+  .cta {
+    background: #2F6BFF;
+    padding: 60px 24px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .cta h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .cta p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 28px;
+  }
+
+  .btn-white {
+    background: #fff;
+    color: #2F6BFF;
+    padding: 14px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  footer {
+    background: #fff;
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid #E5EAF2;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: #94A3B8;
+    margin-bottom: 8px;
+  }
+
+  footer a {
+    color: #2F6BFF;
+    text-decoration: none;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">💙</div>
+    제이맘
+  </div>
+  <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.yitilabs.jmom" target="_blank">다운로드</a>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">🤖 AI 육아 비서</div>
+  <h1>엄마가 다<br><span>기억하지 않아도 돼요</span></h1>
+  <p>공지문 한 장으로 일정·준비물 자동 정리.<br>온 가족이 함께 아이를 돌보는 육아 비서, 제이맘.</p>
+  <div class="hero-btns">
+    <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.yitilabs.jmom" target="_blank">
+      📱 Google Play 다운로드
+    </a>
+    <a class="btn-secondary" href="#features">기능 보기</a>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <h2 class="section-title">제이맘이 챙겨드려요</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📸</div>
+      <h3>AI 공지문 분석</h3>
+      <p>사진 한 장으로 일정·준비물·날짜를 자동 추출해요.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎒</div>
+      <h3>준비물 알림</h3>
+      <p>D-1, D-3 준비물 알림으로 절대 빠뜨리지 않아요.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👨‍👩‍👧</div>
+      <h3>가족 공유 캘린더</h3>
+      <p>아빠, 조부모와 일정을 공유하고 담당자를 지정해요.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛒</div>
+      <h3>준비물 바로 찾기</h3>
+      <p>필요한 준비물을 바로 검색하고 구매할 수 있어요.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌤</div>
+      <h3>오늘 날씨 브리핑</h3>
+      <p>날씨와 함께 오늘 챙길 것들을 먼저 알려드려요.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔔</div>
+      <h3>스마트 알림</h3>
+      <p>일정 충돌, 주간 요약 등 중요한 것만 알려드려요.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>지금 바로 시작해보세요</h2>
+  <p>온 가족이 함께, 아이에게 더 많은 사랑을.</p>
+  <a class="btn-white" href="https://play.google.com/store/apps/details?id=com.yitilabs.jmom" target="_blank">
+    무료 다운로드 →
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 Yiti Labs Co., Ltd.</p>
+  <p>
+    <a href="https://yitilabs.github.io/privacy.html">개인정보처리방침</a>
+  </p>
+</footer>
+
+</body>
+</html>
